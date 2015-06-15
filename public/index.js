@@ -7,7 +7,7 @@ MarkdownPreviewer.SourceView = function(selector) {
 MarkdownPreviewer.SourceView.prototype = {
   getText: function() {
     return this.$elem.val();
-  }, 
+  },
 
   setText: function(newText) {
     this.$elem.val(newText);
@@ -39,4 +39,6 @@ MarkdownPreviewer.Controller.prototype.convertMarkdown = function(mdText)  {
 $(document).ready(function() {
   new MarkdownPreviewer.Controller(new MarkdownPreviewer.SourceView("#markdown-source"),
                                    new MarkdownPreviewer.PreviewView("#preview"));
+
+
 });
